@@ -1,0 +1,264 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face 
+{
+    font-family: 'bree serif';
+    src: url("/resources/fonts/Bree_Serif/BreeSerif-Regular.ttf");
+}
+@font-face 
+{
+    font-family: 'caveat';
+    src: url("/resources/fonts/Caveat/Caveat-VariableFont_wght.ttf");
+}
+@font-face
+{
+    font-family: 'inknut antiqua';
+    src: url("/resources/fonts/Inknut_Antiqua/InknutAntiqua-Regular.ttf");
+}
+@font-face {
+    font-family: 'sorts mill goudy';
+    src: url("/resources/fonts/Sorts_Mill_Goudy/SortsMillGoudy-Regular.ttf");
+}
+
+html
+{
+    font-size: 20px;
+}
+
+nav
+{
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    overflow: hidden;
+    background-color: hsl(44, 100%, 59%);
+    z-index: 10;
+
+}
+nav li
+{
+    display: inline-block;
+    
+}
+nav li a
+{
+    text-decoration: none;
+    font-family: 'sorts mill goudy';
+    color: black;
+    line-height: 10vh;
+    font-weight: bold;
+}
+.nav-link
+{
+    float: right;
+    padding-right: 1.5rem;
+}
+#home-bt
+{
+    position: absolute;
+    display: inline-block;
+    width: 4em;
+    margin-left: 1rem;
+}
+#home-bt img
+{
+    width: 100%;
+    height: auto;
+}
+
+.values
+{
+    position: absolute;
+    display: block;
+    top: 10vh;
+    width: 100vw;
+    height: 90vh;
+    background-color: hsla(44, 100%, 60%, .5);
+}
+#center-cont
+{
+    background-color: hsl(0, 100%, 100%);
+}
+#center-cont p
+{
+    text-align: center;
+    font-family: 'sorts mill goudy';
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: hsl(0, 0%, 0%);
+}
+.text
+{
+    position: absolute;
+    display: block;
+    left: 50%;
+    width: 90vw;
+    margin: 37vh auto 0;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    color: hsl(0, 100%, 100%);
+    font-size: 4rem;
+}
+#passion
+{
+    font-family: 'bree serif';
+    text-align: right;
+}
+#integrity
+{
+    font-family: 'inknut antiqua';
+    text-align: left;
+}
+#humble
+{
+    font-family: 'sorts mill goudy';
+    text-align: center;
+}
+
+::-webkit-scrollbar
+{
+    width: 2px;
+    height: 2px;
+}
+::-webkit-scrollbar-button
+{
+    width: 2px;
+    height: 2px;
+}
+.scroll-cont
+{
+    position: absolute;
+    display: block;
+    top: 19rem;
+    max-height: 100vw;
+    width: 50vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transform: rotate(-90deg) translate(-10rem);
+    transform-origin: left top;
+    z-index: 1;
+}
+.scroll-cont > div
+{
+    display: block;
+    padding: 60rem;
+    transform: rotate(90deg);
+    transform-origin: right top;
+}
+.inside-cont
+{
+    padding: 35rem 0 0 0;
+}
+.inside-cont > div
+{
+    width: auto;
+    height: 20rem;
+    margin: 1%;
+    padding: 5px;
+}
+.scroll-cont img{
+    width: 100%;
+    height: auto;
+    opacity: .5;
+}
+#passion-cont
+{
+   width: 20rem;
+}
+#integrity-cont
+{
+    width: 20rem;
+}
+#humble-cont
+{
+    width: 20rem;
+}
+
+
+
+.projects-scroller
+{
+    --spacer: 1rem;
+    position: relative;
+    top: 100vh;
+    bottom: 5vh;
+    display: grid;
+    height: 100vh;
+    align-content: center;
+    gap: var(--spacer);
+    grid-auto-flow: column;
+    grid-auto-columns: auto;
+    padding: 0 var(--spacer) var(--spacer) var(--spacer);
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    /* background-color: hsla(110, 100%, 60%, .2); */
+}
+.project{
+    display: grid;
+    grid-template-rows: min-content;
+    gap: var(--spacer);
+    padding: 1rem;
+    background: hsla(110, 100%, 60%, 1);
+    border-radius: var(--spacer);
+    box-shadow: 3rem;
+    transition: transform .2s;
+}
+.project:hover
+{
+    transform: scale(1.1);
+}
+.project > img
+{
+    inline-size: 100%;
+    object-fit: cover;
+}
+
+.contact
+{
+    position: fixed;
+    display: block;
+    top:40vh;
+    right: 1rem;
+    z-index: 10;
+}
+.contact-link
+{
+    width: 2rem;
+    transition: transform .2s;
+    margin-bottom: .5rem;
+}
+.contact-link:hover
+{
+    transform: scale(1.2);
+}
+.contact img
+{
+    width: 100%;
+    height: auto;
+    opacity: .8;
+}
+
+footer{
+    position: absolute;
+    top: 200vh;
+    bottom: 0;
+    width: 100vw;
+    height: 5vh;
+    background-color: hsl(0, 5%, 5%);
+}
+
+@media only screen and (max-width: 700px){
+    html{
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 525px){
+    html{
+        font-size: 12px;
+    }
+}
